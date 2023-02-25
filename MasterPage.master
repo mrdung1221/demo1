@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/x-icon" href="resource/image/favicon.ico">
+    <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="resource/css/style.css">
+    <link rel="stylesheet" href="resource/css/menu.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+<div class="warpper">
+	<div class="header">
+		<div class="banner">
+            <asp:Image ID="img_banner" runat="server" ImageUrl="~/resource/image/logo.png" />
+            <span style="color: red;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VSGC</span>
+            <br />
+			<span style="color: red;">HỆ THỐNG ĐẦU TƯ MUA MÍA</span>
+		</div>
+		<div class="user">
+			<div class="user-content">
+                <asp:Label ID="lblHoTen" runat="server" Text="Xin chào: "></asp:Label>
+				<br />
+                <asp:LinkButton ID="lnkThoat" runat="server" onclick="lnkThoat_Click">Thoát</asp:LinkButton>
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- MENU -->
+	<header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .1s">
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Index.aspx">Trang chủ</asp:HyperLink>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Mía nguyên liệu<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NhapMia_CT.aspx">Chi tiết mía nhập</asp:HyperLink>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/NhapMia_TH.aspx">Tổng hợp mía nhập</asp:HyperLink>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/NhapMia_KH.aspx">Danh sách khách hàng</asp:HyperLink>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/TongHopXe.aspx">Tổng hợp xe</asp:HyperLink>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Chữ đường - chất lượng<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/GiongMia_TH.aspx">Tổng hợp giống mía</asp:HyperLink>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/BieuDo_CCSRac.aspx">Giám sát CCS - Rác</asp:HyperLink>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Diện tích</a>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Công nợ</a>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Tài khoản<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Đổi mật khẩu</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Quản trị<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/admin/User.aspx">Quản lý tài khoản</asp:HyperLink>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/admin/PhanQuyen.aspx">Phân quyền người dùng</asp:HyperLink>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+	<!-- END MENU -->
+	
+	<div class="content">
+		
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+    </div><!-- END content -->
+
+    <%--<footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright © Your Website 2022</span>
+            </div>
+        </div>
+    </footer>--%>
+
+</div><!-- END warpper -->
+
+    </form>
+</body>
+</html>

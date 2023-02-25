@@ -1,0 +1,4 @@
+https://laptrinhvb.net/bai-viet/co-so-du-lieu/--SQL-SERVER---Huong-dan-cau-hinh-cho-phep-user-chi-duoc-quyen-truy-cap-vao-mot-so-table-dac-biet-trong-database/5a89f6148638b54c.html
+https://hostingviet.vn/huong-dan-tao-tai-khoan-sqlserver-de-chay-website
+
+grant select on dbo.test2 to [tri]
