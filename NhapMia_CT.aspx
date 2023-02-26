@@ -39,6 +39,7 @@
             <asp:ListItem Text="10" />
             <asp:ListItem Text="11" />
             <asp:ListItem Text="12" />
+            <asp:ListItem Text="13" />
         </asp:DropDownList>
         <asp:TextBox ID="txtYear" runat="server" Width="60px" placeholder="Năm" 
             ToolTip="Năm" Visible="False"></asp:TextBox>
